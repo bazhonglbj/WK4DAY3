@@ -195,15 +195,15 @@ footer {
   height: 200px;;
 }
 
-#gallary #photo figure {
+#gallary .photo figure {
   text-align: center;
 }
 
-#gallary #photo figcaption {
+#gallary .photo figcaption {
   margin-top: 5px; 
 }
 
-#photo li {
+.photo li {
   list-style-type: none;
   display: inline;
   padding: 0 20px;
@@ -222,21 +222,21 @@ footer {
   text-align: center;
 }
 
-#gallary #photo figure {
+#gallary .photo figure {
   position: relative; 
 }
 
-#gallary #photo figure:hover .img-description {
+#gallary .photo figure:hover .img-description {
   display: block;
   font-size: small;
   text-align: center;
 }
 
-#gallary #photo figure:hover img{
+#gallary .photo figure:hover img{
   opacity: 0.5;
 }
 
-#photo figure:hover {
+.photo figure:hover {
   cursor: pointer;
 }
 
