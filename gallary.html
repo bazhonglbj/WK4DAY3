@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallary</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id = "container">
+        <header>Gallary</header>
+        <nav>
+            <ul class="first-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pet_adoption.html">Pet Adoption</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="gallary.html">Gallary</a></li>
+            </ul>
+        </nav> 
+        <main>
+        <h1>Our Families</h1>
+
+        <ul id="gallary">
+        </ul>
+          
+        <p class="website-info">This is our partner website.<a href="https://www.adoptapet.com/pet/30875116-san-jose-california-german-shepherd-dog-mix">Adopt a Pet</a></p>
+        </main>
+        <footer>&copy; Copyright 2023</footer>
+    </div>
+
+    <script>
+       var photos = []; 
+        var fileNames = []; 
+        var imageList = []; 
+        var image ; 
+        var openList = "<li id='photo'>";
+        var closeList = "</li>"; 
+        var descriptions = [
+              "You're such a little angel!",
+              "My heart skips a beat every time I see you.",
+              "You're the cutest little thing!",
+              "You're always so well-behaved, good job!",
+              "Who could resist those gentle eyes?",
+              "You're the little superstar of the pet world!",
+              "Your furry appearance is just so captivating!",
+              "You're always so full of energy.",
+              "You're the best companion.",
+              "You bring endless joy every day!",
+              "What a cutie cat!",
+              "I will love you always!",
+          ];
+
+        
+        for(var i = 0; i < 12 ; i++){
+            fileNames.push("pet" + (i+1)); 
+            photos.push(`
+                  <figure>
+                      <img src='images/gallary/${fileNames[i]}.jpg'>
+                      <div class='img-description'>${descriptions[i]}</div>
+                      <figcaption>Our Pet ${i+1}</figcaption>
+                  </figure>
+              `); 
+            image = openList + photos[i] + closeList; 
+            imageList.push(image); 
+        }
+        document.getElementById("gallary").innerHTML = imageList.join('');
+    </script>
+</body>
+</html>
