@@ -239,3 +239,13 @@ footer {
 #photo figure:hover {
   cursor: pointer;
 }
+
+#infoBox {
+  width: 300px;
+  border-radius: 8px;
+}
+
+#closeInfoBox {
+  color: blue;
+  cursor: pointer;
+}
