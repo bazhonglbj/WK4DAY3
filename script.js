@@ -43,3 +43,23 @@ document.getElementById("closeInfoBox").addEventListener("click", function(event
     document.getElementById("infoBox").style.display = "none";
 });
 document.getElementById("gallary").innerHTML = imageList.join('');
+
+$(document).ready(function() {
+  $(".photo img").click(function(){
+      let imgSrc = $(this).attr("src");
+      let description = $(this).siblings('.img-description').text();
+      
+      $("#modalImage").attr("src", imgSrc);
+      $("#caption").text(description);
+      $("#imageModal").css("display", "block");
+  });
+  
+  $(".close, #imageModal").click(function(){
+      $("#imageModal").css("display", "none");
+  });
+
+  $(".modal-content").click(function(event){
+      event.stopPropagation();
+  });
+});
+
