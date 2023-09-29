@@ -58,8 +58,5 @@ $(document).ready(function() {
       $("#imageModal").css("display", "none");
   });
 
-  $(".modal-content").click(function(event){
-      event.stopPropagation();
-  });
 });
 
